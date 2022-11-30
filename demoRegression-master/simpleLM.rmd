@@ -1,6 +1,6 @@
 ---
 title: "simpleRegress"
-author: "put your name here"
+author: "Cadence Gorden"
 date: "Fall 2020"
 output: html_document
 ---
@@ -17,6 +17,11 @@ bears <- read.csv(file="BEARS.csv",header = TRUE)
 bears$SEX<- as.factor(bears$SEX)
 bears$MONTH<- as.factor(bears$MONTH)
 ```
+
+```{r}
+boxplot(WEIGHT~SEX,data=bears)
+```
+
 
 ## Model LENGTH ~ NECK  this is an example  
 
@@ -36,4 +41,15 @@ predict(simp,new)
 predict(simp,new,se.fit=TRUE)
 ```
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+In the linear graph we can see that though the weight predictions are not always accurate while finding length, it is closer to the length than the neck predicitons. 
+
+
 
