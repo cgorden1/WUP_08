@@ -78,4 +78,12 @@ summary.lm(simp)
 
 In this linear graph we can see that though the chest isn't always a reliable prediction, it is somewhat close to the actual length. 
 
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Here was can see that the head length has a majority of close estimations of length but very few actually hit the exact length.
 
