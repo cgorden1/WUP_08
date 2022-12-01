@@ -87,3 +87,12 @@ summary.lm(simp)
 
 Here was can see that the head length has a majority of close estimations of length but very few actually hit the exact length.
 
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+In this graph you can see that the predictions based on head width are very rarely correct in fact they are way more scattered than most of the other predictions. 
+
