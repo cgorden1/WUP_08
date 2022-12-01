@@ -96,3 +96,12 @@ summary.lm(simp)
 
 In this graph you can see that the predictions based on head width are very rarely correct in fact they are way more scattered than most of the other predictions. 
 
+##Conclusion
+
+After analyzing all the data and graphs we can come to the conclusion that the best estimations based on a part of the body were
+1. head length and length
+2. length and chest
+3. length and neck
+4. length and weight
+5. length and head width
+6. length and age
