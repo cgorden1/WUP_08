@@ -60,5 +60,14 @@ summary.lm(simp)
 
 Here we can see the neck length and neck are somewhat close to the actual length but still off by a lot.
 
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+In the linear model we can see that age is rarely close to the length therefore it would not be a good refence to guess lengtgh.
+
 
 
