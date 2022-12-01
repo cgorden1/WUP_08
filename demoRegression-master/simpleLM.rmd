@@ -67,7 +67,15 @@ abline(simp)
 summary.lm(simp)
 ```
 
-In the linear model we can see that age is rarely close to the length therefore it would not be a good refence to guess lengtgh.
+In the linear model we can see that age is rarely close to the length therefore it would not be a good refrence to guess length.
 
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+In this linear graph we can see that though the chest isn't always a reliable prediction, it is somewhat close to the actual length. 
 
 
